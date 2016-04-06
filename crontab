@@ -1,0 +1,1 @@
+0 2 * * * root cd /letsencrypt; ./letsencrypt-auto renew --non-interactive

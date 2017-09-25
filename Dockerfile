@@ -2,9 +2,7 @@ FROM debian:stable
 
 MAINTAINER Luca Pasquale
 
-RUN apt-get update && apt-get -y install cron wget
-RUN wget -O /certbot-auto https://dl.eff.org/certbot-auto && \
-    chmod a+x /certbot-auto
+RUN apt-get update && apt-get -y install cron certbot
 
 ADD crontab /etc/cron.d/letsencrypt
 RUN chmod 0755 /etc/cron.d/letsencrypt

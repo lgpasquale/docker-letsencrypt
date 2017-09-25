@@ -1,8 +1,8 @@
 #!/bin/bash
 
-cd /letsencrypt
+cd /
 if [ ! -d /etc/letsencrypt/live ]; then
-    ./letsencrypt-auto certonly --standalone --standalone-supported-challenges http-01 $@
+    ./certbot-auto certonly --standalone --preferred-challenges http --no-self-upgrade $@
 fi
 
 cron && tail -f /var/log/letsencrypt-cron.log

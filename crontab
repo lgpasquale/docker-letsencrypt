@@ -1,1 +1,0 @@
-0 2 * * * root /usr/bin/certbot renew --non-interactive > /var/log/letsencrypt-cron.log
